@@ -2,20 +2,27 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { heroImage, memberAvatars } from "@/data/home";
 
-export default function Hero() {
+const defaultTitle = (
+  <>
+    Stronger People <span className="text-mint">Brighter Lives.</span>
+  </>
+);
+
+export default function Hero({
+  image = heroImage,
+  eyebrow = "More than a gym",
+  title = defaultTitle,
+  subtitle = "World-class training, expert coaches, and a supportive community to help you become your strongest, healthiest self.",
+}) {
   return (
     <section className="relative isolate flex min-h-[calc(100vh-6rem)] items-center overflow-hidden">
-      <Image src={heroImage} alt="" fill priority sizes="100vw" className="-z-20 object-cover" />
+      <Image src={image} alt="" fill priority sizes="100vw" className="-z-20 object-cover" />
       <div className="absolute inset-0 -z-10 bg-ink/75" />
 
       <div className="mx-auto max-w-6xl px-5 py-24 text-center sm:px-8">
-        <p className="font-display text-xl font-bold uppercase tracking-[0.3em] text-gold sm:text-2xl">More than a gym</p>
-        <h1 className="mt-6 font-display text-5xl font-extrabold uppercase leading-none sm:text-7xl lg:text-8xl">
-          Stronger People <span className="text-mint">Brighter Lives.</span>
-        </h1>
-        <p className="mx-auto mt-8 max-w-3xl text-lg text-white/85 sm:text-2xl">
-          World-class training, expert coaches, and a supportive community to help you become your strongest, healthiest self.
-        </p>
+        <p className="font-display text-xl font-bold uppercase tracking-[0.3em] text-gold sm:text-2xl">{eyebrow}</p>
+        <h1 className="mt-6 font-display text-5xl font-extrabold uppercase leading-none sm:text-7xl lg:text-8xl">{title}</h1>
+        <p className="mx-auto mt-8 max-w-4xl text-lg text-white/85 sm:text-2xl">{subtitle}</p>
 
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
           <Button href="/book-a-free-trial">Book a Free Trial</Button>
