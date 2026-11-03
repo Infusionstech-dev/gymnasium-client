@@ -1,9 +1,27 @@
-import Image from "next/image";
+import Hero from "@/components/home/Hero";
+import Stats from "@/components/home/Stats";
+import WhyAltafit from "@/components/home/WhyAltafit";
+import Classes from "@/components/home/Classes";
+import Gallery from "@/components/home/Gallery";
+import Membership from "@/components/home/Membership";
+import Trainers from "@/components/home/Trainers";
+import Faq from "@/components/home/Faq";
+import Testimonials from "@/components/home/Testimonials";
+import Cta from "@/components/home/Cta";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-     test
-    </div>
+    <>
+      <Hero />
+      <Stats />
+      <WhyAltafit />
+      <Classes />
+      <Gallery />
+      <Membership />
+      <Trainers />
+      <Faq />
+      <Testimonials />
+      <Cta />
+    </>
   );
 }
