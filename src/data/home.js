@@ -43,14 +43,21 @@ export const classes = [
   { icon: "run", title: "Cardio Blast", text: "Cardio sessions to boost endurance.", image: img("photo-1576678927484-cc907957088c") },
 ];
 
+// Four masonry columns matching the Figma layout. h = image height in px on desktop.
 export const gallery = [
-  { src: img("photo-1593079831268-3381b0db4a77"), alt: "Functional training zone", tall: false },
-  { src: img("photo-1599058917212-d750089bc07e"), alt: "Battle ropes session", tall: true },
-  { src: img("photo-1540497077202-7c8a3999166f"), alt: "Cardio floor", tall: false },
-  { src: img("photo-1534438327276-14e5300c3a48"), alt: "Main training hall", tall: true },
-  { src: img("photo-1584735935682-2f2b69dff9d2"), alt: "Dumbbell rack", tall: true },
-  { src: img("photo-1517963879433-6ad2b056d712"), alt: "Barbell plates", tall: true },
-  { src: img("photo-1549060279-7e168fcee0c2"), alt: "Athlete training", tall: false },
+  [
+    { src: img("photo-1593079831268-3381b0db4a77"), alt: "Functional training zone", h: 350 },
+    { src: img("photo-1584735935682-2f2b69dff9d2"), alt: "Dumbbell rack", h: 400 },
+  ],
+  [{ src: img("photo-1599058917212-d750089bc07e"), alt: "Battle ropes session", h: 782 }],
+  [
+    { src: img("photo-1540497077202-7c8a3999166f"), alt: "Cardio floor", h: 252 },
+    { src: img("photo-1517963879433-6ad2b056d712"), alt: "Barbell plates", h: 498 },
+  ],
+  [
+    { src: img("photo-1534438327276-14e5300c3a48"), alt: "Main training hall", h: 500 },
+    { src: img("photo-1541534741688-6078c6bfb5c5"), alt: "Barbell curls", h: 250 },
+  ],
 ];
 
 export const plans = [
