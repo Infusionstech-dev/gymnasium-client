@@ -21,13 +21,13 @@ export default function WhyAltafit() {
           </p>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-3">
-            {features.map((f) => (
-              <div key={f.title} className="rounded-lg border border-gold/60 bg-ink-soft p-4">
+            {features.map((feature) => (
+              <div key={feature.title} className="rounded-lg border border-gold/60 bg-ink-soft p-4">
                 <span className="inline-flex h-12 w-12 items-center justify-center rounded-md border border-gold/60 text-gold">
-                  <Icon name={f.icon} className="h-6 w-6" />
+                  <Icon name={feature.icon} className="h-6 w-6" />
                 </span>
-                <h3 className="mt-6 font-display text-xl font-bold uppercase text-mint">{f.title}</h3>
-                <p className="mt-1 text-sm text-white/85">{f.text}</p>
+                <h3 className="mt-6 font-display text-xl font-bold uppercase text-mint">{feature.title}</h3>
+                <p className="mt-1 text-sm text-white/85">{feature.text}</p>
               </div>
             ))}
           </div>

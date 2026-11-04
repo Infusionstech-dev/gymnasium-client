@@ -14,22 +14,22 @@ export default function Faq() {
         <SectionHeading center dark={false} eyebrow="Clarity first" title="Frequently asked questions" subtitle="Everything you need to know prior to stepping onto our training floor." />
 
         <div className="mt-14 space-y-5">
-          {faqs.map((item, i) => {
-            const open = openIndex === i;
+          {faqs.map((item, index) => {
+            const open = openIndex === index;
             return (
-              <div key={item.q} className="rounded-xl bg-white shadow-[0_2px_16px_rgba(0,0,0,0.08)]">
+              <div key={item.question} className="rounded-xl bg-white shadow-[0_2px_16px_rgba(0,0,0,0.08)]">
                 <button
                   type="button"
-                  onClick={() => setOpenIndex(open ? null : i)}
+                  onClick={() => setOpenIndex(open ? null : index)}
                   aria-expanded={open}
                   className="flex w-full items-center justify-between gap-6 px-8 py-7 text-left"
                 >
-                  <span className="font-display text-xl font-bold uppercase tracking-wide text-ink sm:text-2xl">{item.q}</span>
+                  <span className="font-display text-xl font-bold uppercase tracking-wide text-ink sm:text-2xl">{item.question}</span>
                   <Icon name="chevron" className={`h-6 w-6 shrink-0 text-ink transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
                 </button>
                 <div className={`grid transition-all duration-300 ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
                   <p className="overflow-hidden px-8 text-ink/75">
-                    <span className="block pb-7">{item.a}</span>
+                    <span className="block pb-7">{item.answer}</span>
                   </p>
                 </div>
               </div>

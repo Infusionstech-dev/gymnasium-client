@@ -34,10 +34,10 @@ export default function Membership({ ctaLabel = "Explore Membership", ctaHref = 
                 </p>
 
                 <ul className="mt-6 flex-1 space-y-5">
-                  {plan.features.map((f) => (
-                    <li key={f} className="flex items-center gap-4 text-lg">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-center gap-4 text-lg">
                       <Icon name="check" className={`h-6 w-6 shrink-0 ${popular ? "text-mint" : "text-gold"}`} />
-                      {f}
+                      {feature}
                     </li>
                   ))}
                 </ul>

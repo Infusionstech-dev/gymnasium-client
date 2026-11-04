@@ -14,15 +14,15 @@ export default function Gallery() {
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-[376fr_408fr_408fr_312fr] lg:gap-8">
-          {gallery.map((column, i) => (
-            <div key={i} className="flex flex-col gap-6 lg:gap-8">
-              {column.map((g) => (
+          {gallery.map((column, columnIndex) => (
+            <div key={columnIndex} className="flex flex-col gap-6 lg:gap-8">
+              {column.map((photo) => (
                 <div
-                  key={g.alt}
-                  style={{ "--h": `${g.h}px` }}
-                  className="relative h-72 overflow-hidden rounded-xl lg:h-(--h)"
+                  key={photo.alt}
+                  style={{ "--photo-height": `${photo.height}px` }}
+                  className="relative h-72 overflow-hidden rounded-xl lg:h-(--photo-height)"
                 >
-                  <Image src={g.src} alt={g.alt} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-500 hover:scale-105" />
+                  <Image src={photo.src} alt={photo.alt} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-500 hover:scale-105" />
                 </div>
               ))}
             </div>

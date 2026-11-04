@@ -36,10 +36,10 @@ export default function Footer() {
           </ul>
 
           <ul className="flex justify-center gap-5 md:justify-end">
-            {socials.map((s) => (
-              <li key={s.label}>
-                <a href={s.href} aria-label={s.label} className="text-white/80 transition-colors hover:text-mint">
-                  <Icon name={s.icon} className="h-6 w-6" />
+            {socials.map((social) => (
+              <li key={social.label}>
+                <a href={social.href} aria-label={social.label} className="text-white/80 transition-colors hover:text-mint">
+                  <Icon name={social.icon} className="h-6 w-6" />
                 </a>
               </li>
             ))}
