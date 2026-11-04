@@ -3,7 +3,7 @@ import Icon from "@/components/ui/Icon";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { plans } from "@/data/home";
 
-export default function Membership() {
+export default function Membership({ ctaLabel = "Explore Membership", ctaHref = "/membership" }) {
   return (
     <section className="bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -42,8 +42,8 @@ export default function Membership() {
                   ))}
                 </ul>
 
-                <Button href="/membership" variant={popular ? "primary" : "outline-gold"} className="mt-16 w-full">
-                  Explore Membership
+                <Button href={ctaHref} variant={popular ? "primary" : "outline-gold"} className="mt-16 w-full">
+                  {ctaLabel}
                 </Button>
               </div>
             );
