@@ -16,10 +16,11 @@ const legalLinks = [
 ];
 
 const socials = [
-  { icon: "camera", label: "Instagram", href: "#" },
-  { icon: "globe", label: "Website", href: "#" },
-  { icon: "play", label: "YouTube", href: "#" },
-  { icon: "share", label: "Share", href: "#" },
+  // TODO: replace with the client's real email and social profile URLs.
+  { icon: "mail", label: "Email", href: "mailto:hello@altafit.com" },
+  { icon: "facebook", label: "Facebook", href: "https://facebook.com" },
+  { icon: "instagram", label: "Instagram", href: "https://instagram.com" },
+  { icon: "tiktok", label: "TikTok", href: "https://tiktok.com" },
 ];
 
 export default function Footer() {
@@ -44,7 +45,12 @@ export default function Footer() {
           <ul className="flex justify-center gap-5 md:justify-end">
             {socials.map((social) => (
               <li key={social.label}>
-                <a href={social.href} aria-label={social.label} className="text-white/80 transition-colors hover:text-mint">
+                <a
+                  href={social.href}
+                  aria-label={social.label}
+                  {...(social.href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
+                  className="text-white transition-colors hover:text-mint"
+                >
                   <Icon name={social.icon} className="h-6 w-6" />
                 </a>
               </li>

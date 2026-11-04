@@ -19,7 +19,11 @@ const paths = {
   clipboard: <><rect x="5" y="3" width="14" height="18" rx="2" /><path d="M9 8h6M9 12h3" /><circle cx="15" cy="15.5" r="2" /><path d="M12.5 20c.4-1.6 1.3-2.5 2.5-2.5s2.1.9 2.5 2.5" /></>,
   pulse: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M6 12h3l1.5-3 3 6 1.5-3h3" /></>,
   sauna: <><path d="M4 20h16M5 20v-6h14v6M9 14v6M15 14v6M8 10c0-1 1-1.5 1-2.5S8 6 8 5M12 10c0-1 1-1.5 1-2.5S12 6 12 5M16 10c0-1 1-1.5 1-2.5S16 6 16 5" /></>,
-  calendar: <><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4M7.5 14h2M11 14h2M14.5 14h2M7.5 17.5h2M11 17.5h2" /></>,
+  mail: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3.5 6.5L12 13l8.5-6.5" /></>,
+  facebook: <path fill="currentColor" stroke="none" d="M12 2a10 10 0 00-1.6 19.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0012 2z" />,
+  instagram: <><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></>,
+  tiktok: <path fill="currentColor" stroke="none" d="M16.6 2h-3.3v13.2a2.8 2.8 0 11-2.8-2.8c.3 0 .6 0 .9.1V9.1a6.2 6.2 0 105.2 6.1V8.6a7.9 7.9 0 004.4 1.4V6.7a4.5 4.5 0 01-4.4-4.7z" />,
+  calendar:<><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4M7.5 14h2M11 14h2M14.5 14h2M7.5 17.5h2M11 17.5h2" /></>,
   clock: <><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></>,
   cup:<><path d="M5 8h11v6a5 5 0 01-5 5h-1a5 5 0 01-5-5z" /><path d="M16 10h1.5a2.5 2.5 0 010 5H16M8 4h5" /></>,
 };
