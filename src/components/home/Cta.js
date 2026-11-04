@@ -2,7 +2,7 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { ctaImage } from "@/data/home";
 
-export default function Cta() {
+export default function Cta({ showMembershipButton = true }) {
   return (
     <section className="py-20 lg:py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
@@ -21,7 +21,9 @@ export default function Cta() {
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Button href="/book-a-free-trial">Book a Free Trial</Button>
-            <Button href="/membership" variant="outline">Explore Membership</Button>
+            {showMembershipButton && (
+              <Button href="/membership" variant="outline">Explore Membership</Button>
+            )}
           </div>
         </div>
       </div>
