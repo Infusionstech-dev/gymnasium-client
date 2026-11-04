@@ -3,9 +3,9 @@ import Icon from "@/components/ui/Icon";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { testimonials } from "@/data/home";
 
-function TestimonialCard({ testimonial }) {
+export function TestimonialCard({ testimonial, className = "w-[85vw] max-w-[640px] shrink-0" }) {
   return (
-    <figure className="w-[85vw] max-w-[640px] shrink-0 rounded-xl bg-ink-soft p-8">
+    <figure className={`rounded-xl bg-ink-soft p-8 ${className}`}>
       <div className="flex items-center justify-between">
         <div className="flex gap-1 text-gold">
           {Array.from({ length: 5 }, (_, starIndex) => (
