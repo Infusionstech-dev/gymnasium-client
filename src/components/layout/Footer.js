@@ -9,6 +9,12 @@ const footerLinks = [
   { label: "Membership", href: "/membership" },
 ];
 
+const legalLinks = [
+  { label: "Terms of Use", href: "/terms" },
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Support", href: "/support" },
+];
+
 const socials = [
   { icon: "camera", label: "Instagram", href: "#" },
   { icon: "globe", label: "Website", href: "#" },
@@ -47,10 +53,17 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-3 border-t border-white/10 py-6 text-sm text-white/60 sm:flex-row">
-          <p>&copy; 2026 AltaFit. All rights reserved.</p>
-          <Link href="/contact" className="transition-colors hover:text-mint">
-            Contact
-          </Link>
+          <p className="text-white/75">&copy; 2026 AltaFit. All rights reserved.</p>
+          <ul className="flex items-center text-white">
+            {legalLinks.map((link, index) => (
+              <li key={link.label} className="flex items-center">
+                {index > 0 && <span className="px-1.5" aria-hidden="true">|</span>}
+                <Link href={link.href} className="transition-colors hover:text-mint">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>
