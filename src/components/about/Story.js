@@ -16,13 +16,13 @@ export default function Story() {
           </p>
 
           <div className="mt-12 grid gap-5 sm:grid-cols-3">
-            {values.map((v) => (
-              <div key={v.title} className="rounded-lg border border-gold/60 bg-ink-soft p-4">
+            {values.map((value) => (
+              <div key={value.title} className="rounded-lg border border-gold/60 bg-ink-soft p-4">
                 <span className="inline-flex h-12 w-12 items-center justify-center rounded-md border border-gold/60 text-gold">
-                  <Icon name={v.icon} className="h-6 w-6" />
+                  <Icon name={value.icon} className="h-6 w-6" />
                 </span>
-                <h3 className="mt-5 font-display text-xl font-bold uppercase text-mint">{v.title}</h3>
-                <p className="mt-1 text-sm text-white/85">{v.text}</p>
+                <h3 className="mt-5 font-display text-xl font-bold uppercase text-mint">{value.title}</h3>
+                <p className="mt-1 text-sm text-white/85">{value.text}</p>
               </div>
             ))}
           </div>
