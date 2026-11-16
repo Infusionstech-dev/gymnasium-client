@@ -1,3 +1,4 @@
+import StatCounter from "@/components/home/StatCounter";
 import { stats } from "@/data/home";
 
 export default function Stats() {
@@ -9,7 +10,7 @@ export default function Stats() {
             key={stat.label}
             className={`py-4 text-center ${index % 2 === 1 ? "border-l border-mint/70" : ""} ${index === 2 ? "lg:border-l lg:border-mint/70" : ""}`}
           >
-            <p className="font-display text-5xl font-bold">{stat.value}</p>
+            <StatCounter value={stat.value} className="font-display text-5xl font-bold" />
             <p className="mt-1 font-display text-base font-semibold uppercase tracking-[0.15em] text-gold">{stat.label}</p>
           </div>
         ))}
