@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "@/components/ui/Button";
-import { heroImage, memberAvatars } from "@/data/home";
+import HeroSlideshow from "@/components/home/HeroSlideshow";
+import { heroSlideImages, memberAvatars } from "@/data/home";
 
 const defaultTitle = (
   <>
@@ -9,14 +10,18 @@ const defaultTitle = (
 );
 
 export default function Hero({
-  image = heroImage,
+  // Pass `image` for a single still photo (e.g. About page); otherwise the home slideshow is used
+  image,
+  slideImages = heroSlideImages,
   eyebrow = "More than a gym",
   title = defaultTitle,
   subtitle = "World-class training, expert coaches, and a supportive community to help you become your strongest, healthiest self.",
 }) {
+  const heroImages = image ? [image] : slideImages;
+
   return (
     <section className="relative isolate flex min-h-[calc(100vh-6rem)] items-center overflow-hidden">
-      <Image src={image} alt="" fill priority sizes="100vw" className="-z-20 object-cover" />
+      <HeroSlideshow slideImages={heroImages} />
       <div className="absolute inset-0 -z-10 bg-ink/75" />
 
       <div className="mx-auto max-w-6xl px-5 py-24 text-center sm:px-8">
