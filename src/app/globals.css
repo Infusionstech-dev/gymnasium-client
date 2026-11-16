@@ -9,6 +9,21 @@
   --font-display: var(--font-barlow);
 }
 
+/* Font size scale: 72px headings -> 60px, smaller sizes reduced a little less */
+@theme {
+  --text-sm: 0.8125rem; /* 14px -> 13px */
+  --text-base: 0.9375rem; /* 16px -> 15px */
+  --text-lg: 1.0625rem; /* 18px -> 17px */
+  --text-xl: 1.1875rem; /* 20px -> 19px */
+  --text-2xl: 1.375rem; /* 24px -> 22px */
+  --text-3xl: 1.6875rem; /* 30px -> 27px */
+  --text-4xl: 2rem; /* 36px -> 32px */
+  --text-5xl: 2.625rem; /* 48px -> 42px */
+  --text-6xl: 3.25rem; /* 60px -> 52px */
+  --text-7xl: 3.75rem; /* 72px -> 60px */
+  --text-8xl: 5rem; /* 96px -> 80px */
+}
+
 html {
   scroll-behavior: smooth;
 }
