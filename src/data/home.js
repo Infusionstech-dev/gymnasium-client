@@ -10,7 +10,14 @@ export const navLinks = [
   { label: "Mentors", href: "/mentors" },
 ];
 
-export const heroImage = unsplashImage("photo-1534438327276-14e5300c3a48");
+// Hero slideshow photos (1920x1080), stored in public/images/hero
+export const heroSlideImages = [
+  "/images/hero/hero-1.jpg",
+  "/images/hero/hero-2.jpg",
+  "/images/hero/hero-3.jpg",
+  "/images/hero/hero-4.jpg",
+  "/images/hero/hero-5.jpg",
+];
 
 export const memberAvatars = [
   unsplashImage("photo-1583454110551-21f2fa2afe61"),
